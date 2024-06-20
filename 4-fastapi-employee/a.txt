@@ -1,0 +1,44 @@
+Restaurent -- `Food Booking`
+
+Owner, Waiter, Customer
+
+Customer -->
+/list/items?type={section}
+[
+    {
+        "id":1,
+        "name": "roti",
+        "cost": "20/-",
+        "specfic_discount" : "",
+        "delievery_time" : "15m",
+        "image_url":""
+
+    },
+    {
+        "id":2,
+        "name": "Naan",
+        "cost": "30/-",
+        "specfic_discount" : "",
+        "delievery_time" : "10m",
+        "image_url":""
+    }
+]
+
+Waiter -->
+1. Table Number
+2. Food Items []
+3. Waiter_id
+
+/list/items?type={section}
+
+POST --> /book/food
+--> selecting list of items and respective count..
+
+[
+    {
+        "item_id":1,
+        "count": 5,
+        "table_number": 1
+    }
+]
+

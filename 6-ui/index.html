@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management Portal</h1>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+            <button onclick="showSection('registerSection')">Register Employee</button>
+            <button onclick="showSection('getEmployeeSection')">Get Employee</button>
+            <button onclick="showSection('deleteEmployeeSection')">Delete Employee</button>
+            <button onclick="showSection('allEmployeesSection')">All Employees</button>
+        </div>
+
+        <!-- Register Employee Section -->
+        <div id="registerSection" class="section">
+            <h2>Register Employee</h2>
+            <form id="registerForm">
+                <label for="emp_id">Employee ID:</label>
+                <input type="number" id="emp_id" name="emp_id" required>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="salary">Salary:</label>
+                <input type="number" id="salary" name="salary" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <button type="submit">Register</button>
+            </form>
+            <div id="registerResult"></div>
+        </div>
+
+        <!-- Get Employee Section -->
+        <div id="getEmployeeSection" class="section" style="display: none;">
+            <h2>Get Employee</h2>
+            <form id="getEmployeeForm">
+                <label for="get_emp_id">Employee ID:</label>
+                <input type="number" id="get_emp_id" name="get_emp_id" required>
+                <button type="submit">Get Employee</button>
+            </form>
+            <div id="getEmployeeResult"></div>
+        </div>
+
+        <!-- Delete Employee Section -->
+        <div id="deleteEmployeeSection" class="section" style="display: none;">
+            <h2>Delete Employee</h2>
+            <form id="deleteEmployeeForm">
+                <label for="delete_emp_id">Employee ID:</label>
+                <input type="number" id="delete_emp_id" name="delete_emp_id" required>
+                <button type="submit">Delete Employee</button>
+            </form>
+            <div id="deleteEmployeeResult"></div>
+        </div>
+
+        <!-- All Employees Section -->
+        <div id="allEmployeesSection" class="section" style="display: none;">
+            <h2>All Employees</h2>
+            <button id="getAllEmployeesBtn">Get All Employees</button>
+            <div id="allEmployeesResult"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
